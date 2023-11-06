@@ -18,7 +18,10 @@ def predict():
     prediction = model.predict_proba(final_features)
     output = '{0:.{1}f}%'.format(prediction[0][1] * 100, 2)  #Konvertierung in Prozentsatz
 
-    return jsonify({'prediction_text': 'Betrugswahrscheinlichkeit: {}'.format(output)})
+    response_text = 'Die Betrugswahrscheinlichkeit liegt bei {}'.format(output)
+
+    return jsonify({'prediction_text': response_text})
+
 
 if __name__ == "__main__":
     app.run(debug=True)
