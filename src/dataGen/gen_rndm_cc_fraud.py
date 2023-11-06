@@ -5,13 +5,13 @@ import os
 
 df = pd.read_csv('data/input/creditcard.csv')
 
-results_folder = 'sampleResultsJson'
+results_folder = 'src/dataGen/sampleResultsJson'
 if not os.path.exists(results_folder):
     os.makedirs(results_folder)
 
 
 # Feature-Namen für V1-V28 erstellen + Time und Amount
-feature_names = [f'V{i}' for i in range(1, 29)] + ['Time', 'Amount']
+feature_names = ['Time'] + [f'V{i}' for i in range(1, 29)] + ['Amount']
 
 user_choice = input("Möchten Sie Werte für 'no_fraud' oder 'fraud' generieren? (Bitte 'no_fraud' oder 'fraud' eingeben): ")
 

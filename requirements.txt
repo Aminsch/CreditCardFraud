@@ -10,4 +10,5 @@ kaggle
 
 xgboost
 scikit-learn
-ipywidgets
+
+flask

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ihre Fraud Detection Anwendung</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        /* Hier können Sie zusätzliche benutzerdefinierte Stile einfügen */
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Fraud Detection Formular</h2>
+    <form id="predictionForm">
+        <input type="text" name="Time" placeholder="Feature time" required="required" />
+        <input type="text" name="V1" placeholder="Feature 1" required="required" />
+        <input type="text" name="V2" placeholder="Feature 2" required="required" />
+        <input type="text" name="V3" placeholder="Feature 3" required="required" />
+        <input type="text" name="V4" placeholder="Feature 4" required="required" />
+        <input type="text" name="V5" placeholder="Feature 5" required="required" />
+        <input type="text" name="V6" placeholder="Feature 6" required="required" />
+        <input type="text" name="V7" placeholder="Feature 7" required="required" />
+        <input type="text" name="V8" placeholder="Feature 8" required="required" />
+        <input type="text" name="V9" placeholder="Feature 9" required="required" />
+        <input type="text" name="V10" placeholder="Feature 10" required="required" />
+        <input type="text" name="V11" placeholder="Feature 11" required="required" />
+        <input type="text" name="V12" placeholder="Feature 12" required="required" />
+        <input type="text" name="V13" placeholder="Feature 13" required="required" />
+        <input type="text" name="V14" placeholder="Feature 14" required="required" />
+        <input type="text" name="V15" placeholder="Feature 15" required="required" />
+        <input type="text" name="V16" placeholder="Feature 16" required="required" />
+        <input type="text" name="V17" placeholder="Feature 17" required="required" />
+        <input type="text" name="V18" placeholder="Feature 18" required="required" />
+        <input type="text" name="V19" placeholder="Feature 19" required="required" />
+        <input type="text" name="V20" placeholder="Feature 20" required="required" />
+        <input type="text" name="V21" placeholder="Feature 21" required="required" />
+        <input type="text" name="V22" placeholder="Feature 22" required="required" />
+        <input type="text" name="V23" placeholder="Feature 23" required="required" />
+        <input type="text" name="V24" placeholder="Feature 24" required="required" />
+        <input type="text" name="V25" placeholder="Feature 25" required="required" />
+        <input type="text" name="V26" placeholder="Feature 26" required="required" />
+        <input type="text" name="V27" placeholder="Feature 27" required="required" />
+        <input type="text" name="V28" placeholder="Feature 28" required="required" />
+        <input type="text" name="Amount" placeholder="Feature amount" required="required" />
+        
+        <div class="form-group">
+            <label for="jsonInput">JSON Input:</label>
+            <textarea class="form-control" id="jsonInput" rows="5"></textarea>
+        </div>
+        <button type="button" id="jsonSubmitButton" class="btn btn-info">Load JSON</button>
+        <button type="button" id="predictButton" class="btn btn-primary">Betrugsvorhersage</button>
+        <button type="button" id="clearButton" class="btn btn-warning">Felder löschen</button>
+    </form>
+    <div id="predictionResult" class="mt-3"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Funktion zur Ausführung der Betrugsvorhersage
+        function makePrediction() {
+            var formData = $('#predictionForm').serialize(); // Serialisiert die Formulardaten
+
+            $.ajax({
+                type: 'POST',
+                url: '/predict', // Der Endpoint Ihrer Flask-Anwendung, der die Vorhersage macht
+                data: formData,
+                success: function(response) {
+                    // Hier können Sie das Ergebnis anzeigen
+                    $('#predictionResult').text(response.prediction_text);
+                },
+                error: function(error) {
+                    console.log(error);
+                    alert('Ein Fehler ist aufgetreten');
+                }
+            });
+        }
+
+        // Event-Listener für den neuen Betrugsvorhersage-Button
+        $('#predictButton').on('click', function() {
+            makePrediction();
+        });
+
+        // Event-Listener für den JSON-Submit-Button
+        $('#jsonSubmitButton').on('click', function() {
+            // Hier die bestehende Logik zum Laden des JSON
+            // ...
+            makePrediction(); // Führt die Vorhersage aus, nachdem die JSON-Daten geladen wurden
+        });
+                // Event-Listener für den Clear-Button
+        $('#clearButton').on('click', function() {
+            $('#predictionForm').find('input[type=text], textarea').val('');
+            // Leert das Ergebnis-Div
+            $('#predictionResult').empty();
+        });
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+    // JaVaScript um JSON zu parsen und in die Felder einzufügen
+    document.getElementById('jsonSubmitButton').addEventListener('click', function() {
+    var jsonInput = document.getElementById('jsonInput').value;
+    try {
+        var data = JSON.parse(jsonInput);
+        for (var key in data) {
+            if (data.hasOwnProperty(key)) {
+                var input = document.getElementsByName(key)[0];
+                if (input) {
+                    input.value = data[key];
+                }
+            }
+        }
+    } catch (e) {
+        alert('Ungültiges JSON!');
+    }
+});
+</script>
+</body>
+</html>
