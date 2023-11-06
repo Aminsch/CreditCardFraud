@@ -9,7 +9,7 @@ Ziel des Projekts ist es, ein Modell zu entwickeln, welches Kreditkartenbetrug e
 Das Repository ist in folgende Ordner aufgeteilt:
 - `data/input`: Enthält den Datensatz, welcher von Kaggle heruntergeladen wurde.
 - `notebooks`: Enthält alle Jupyter Notebooks, welche für die Entwicklung des Modells verwendet wurden.
-- `src`: Enthält alle Python Skripte, welche verwendet werden
-- `models`: Enthält die trainierten Modelle
-- `sampleResultsJson`: In dieser
+- `src/app`: Enthält den Source Code der Applikation sowie das HTML File (`src/app/templates/index.html`) für die Visualisierung.
+- `src/dataGen`: Enthält den Source Code für die Generierung der Beispieldaten.
+- `src/dataGen/sampleResultsJson`: In diesem Ordner werden die Ergebnisse der Beispiel Resultate gespeichert.
 
