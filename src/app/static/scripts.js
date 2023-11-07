@@ -4,27 +4,27 @@ $(document).ready(function() {
         var formData = $('#predictionForm').serialize();
 
         $.ajax({ // AJAX-Request wird verwendet um den eingebegebenen Text an den Server zu senden (in unserem Fall die Flask-App)
-            type: 'POST',
-            url: '/predict',
-            data: formData,
+            type: 'POST', // Verwende POST-Methode
+            url: '/predict', // URL, an die die Daten gesendet werden sollen
+            data: formData, 
             success: function(response) {
                 $('#predictionResult').text(response.prediction_text);
                 
-                var percentageString = response.prediction_text.match(/(\d+(\.\d+)?%)/);
-                var percentage = percentageString ? parseFloat(percentageString[0]) : 0;
+                var percentageString = response.prediction_text.match(/(\d+(\.\d+)?%)/); // Suche nach einer Zahl mit Prozentzeichen
+                var percentage = percentageString ? parseFloat(percentageString[0]) : 0; // Konvertiere den Wert in eine Zahl
             
                 // Prüfe, ob die Wahrscheinlichkeit größer als 1% ist
                 if (percentage > 1) {
                     // Zeige die Warnung nur einmal an
                     if($('#fraudAlert').length === 0) {
                         $('#predictionResult').after('<div id="fraudAlert" style="color: red;">Es könnte sich bei dieser Transaktion um eine betrügerische Handlung handeln, diese erfordert weitere Analysen ihrerseits!</div>');
-                        resultPosition = $('#fraudAlert').offset().top;
+                        resultPosition = $('#fraudAlert').offset().top; // Speichere die Position der Warnung
                     }
                 } else {
                     // Entferne die Warnung, falls sie existiert und die Bedingung nicht mehr zutrifft
                     $('#fraudAlert').remove();
                 }
-                $('html, body').animate({
+                $('html, body').animate({ // Scrolle zur Ergebnis-Anzeige
                     scrollTop: resultPosition - 20 // Etwas Platz über dem Ziel für bessere Sichtbarkeit
                 }, 500);
             },
@@ -52,12 +52,12 @@ $(document).ready(function() {
     $('#jsonSubmitButton').on('click', function() {
         var jsonInput = $('#jsonInput').val();
         try {
-            var data = JSON.parse(jsonInput);
-            for (var key in data) {
-                if (data.hasOwnProperty(key)) {
-                    var input = $('input[name="' + key + '"]');
-                    if (input) {
-                        input.val(data[key]);
+            var data = JSON.parse(jsonInput); // Versuche den eingegebenen Text als JSON zu parsen
+            for (var key in data) { // Iteriere über alle Eigenschaften des Objekts 
+                if (data.hasOwnProperty(key)) { // Prüfe, ob das Objekt die Eigenschaft besitzt
+                    var input = $('input[name="' + key + '"]'); // Suche nach dem Input-Feld mit dem Namen der Eigenschaft
+                    if (input) { 
+                        input.val(data[key]); // Füge den Wert der Eigenschaft in das Input-Feld ein
                     }
                 }
             }
