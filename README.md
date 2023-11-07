@@ -8,8 +8,14 @@ Ziel des Projekts ist es, ein Modell zu entwickeln, welches Kreditkartenbetrug e
 ## Aufbau Repository
 Das Repository ist in folgende Ordner aufgeteilt:
 - `data/input`: Enthält den Datensatz, welcher von Kaggle heruntergeladen wurde.
-- `notebooks`: Enthält alle Jupyter Notebooks, welche für die Entwicklung des Modells verwendet wurden.
+- `models`: Enthält einen JSON Export des besten mit XGboost erstellten Models
 - `src/app`: Enthält den Source Code der Applikation sowie das HTML File (`src/app/templates/index.html`) für die Visualisierung.
 - `src/dataGen`: Enthält den Source Code für die Generierung der Beispieldaten.
 - `src/dataGen/sampleResultsJson`: In diesem Ordner werden die Ergebnisse der Beispiel Resultate gespeichert.
+- `dokumentationProjekt`: In diesem Ordner finden sich weitere Dokumentation für das Machine Learning Projekt wie die Architektur oder die Requierenments
 
+
+## Notizen 
+Website aufhübschen
+Probieren mit Over oder Undersampling der Daten den Recall zuoptiemieren
+Visualisieren, wei die Optimierung kommt -> 

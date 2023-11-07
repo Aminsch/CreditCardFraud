@@ -17,7 +17,7 @@ $(document).ready(function() {
                 if (percentage > 1) {
                     // Zeige die Warnung nur einmal an
                     if($('#fraudAlert').length === 0) {
-                        $('#predictionResult').after('<div id="fraudAlert" style="color: red;">Es könnte sich bei dieser Transaktion um eine betrügerische Handlung handeln, diese erfordert weitere Analysen ihrerseits!</div>');
+                        $('#predictionResult').after('<div id="fraudAlert" style="color: red;">Es könnte sich bei dieser Transaktion um eine betrügerische Handlung handeln, diese erfordert weitere Analysen Ihrerseits!</div>');
                         resultPosition = $('#fraudAlert').offset().top; // Speichere die Position der Warnung
                     }
                 } else {
