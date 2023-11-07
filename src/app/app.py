@@ -12,10 +12,10 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    # Erhalten der Feature-Daten vom POST-Request und Konvertierung in Array
-    features = [float(x) for x in request.form.values()] #Konvertierung in Float
-    final_features = np.array(features).reshape(1, -1) #Konvertierung in Array
-    prediction = model.predict_proba(final_features) #Vorhersage der Wahrscheinlichkeit
+    # Erhalten der Feature-Daten vom POST-Request
+    features = [float(x) for x in request.form.values()] #Konvertierung in Float  
+    final_features = np.array(features).reshape(1, -1) #Konvertierung in Array mit 1 Zeile und n Spalten
+    prediction = model.predict_proba(final_features) #Vorhersage der Wahrscheinlichkeit 
     output = '{0:.{1}f}%'.format(prediction[0][1] * 100, 2)  #Konvertierung in Prozentsatz
 
     response_text = 'Die Betrugswahrscheinlichkeit liegt bei {}'.format(output)
