@@ -13,8 +13,8 @@ $(document).ready(function() {
                 var percentageString = response.prediction_text.match(/(\d+(\.\d+)?%)/); // Suche nach einer Zahl mit Prozentzeichen
                 var percentage = percentageString ? parseFloat(percentageString[0]) : 0; // Konvertiere den Wert in eine Zahl
             
-                // Prüfe, ob die Wahrscheinlichkeit größer als 1% ist
-                if (percentage > 1) {
+                // Prüfe, ob die Wahrscheinlichkeit größer als 33% ist
+                if (percentage > 30) {
                     // Zeige die Warnung nur einmal an
                     if($('#fraudAlert').length === 0) {
                         $('#predictionResult').after('<div id="fraudAlert" style="color: red;">Es könnte sich bei dieser Transaktion um eine betrügerische Handlung handeln, diese erfordert weitere Analysen Ihrerseits!</div>');

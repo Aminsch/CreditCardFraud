@@ -18,4 +18,4 @@ Das Repository ist in folgende Ordner aufgeteilt:
 ## Notizen 
 Website aufhübschen
 Probieren mit Over oder Undersampling der Daten den Recall zuoptiemieren
-Visualisieren, wei die Optimierung kommt -> 
+Visualisieren, wei die Optimierung kommt -> warum wurde kennzahl xy optimiert

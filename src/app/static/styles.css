@@ -1,7 +1,14 @@
+@font-face {
+    font-family: 'Guardian';
+    src: url('fonts/Guardian.woff2') format('woff2'),
+         url('fonts/Guardian.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
-    background: rgb(255,250,237);
-    background: linear-gradient(180deg, rgba(255,250,237,1) 50%, rgba(211,211,211,1) 100%);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(1,111,208);
+    background: linear-gradient(180deg, rgba(1,111,208,1) 0%, rgba(255,255,255,1) 15%);
+    font-family: 'Guardian', sans-serif;
     margin-top: 20px;
 }
 .container {
@@ -34,7 +41,7 @@ input, textarea {
     box-sizing: border-box;
 }
 button {
-    background-color: #007bff;
+    background-color: #016FD0	;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -47,7 +54,7 @@ button:hover {
     background-color: #0056b3;
 }
 #predictionResult {
-    color: #2c3e50;
+    color: #016FD0;
     margin-top: 20px;
     padding: 10px;
     background-color: #e2e6ea;
@@ -57,3 +64,163 @@ button:hover {
     margin-bottom: 20px;
 }
 
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Abstand zwischen den Reihen */
+}
+
+.form-row input {
+    width: 48%; /* Jedes Eingabefeld nimmt weniger als die Hälfte der Containerbreite ein, um Platz für den Abstand zu lassen */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF; /* Weißer Hintergrund */
+    padding: 10px 20px;
+    border-bottom: 2px solid #E7E7E7; /* Leichter Schatten oder Trennlinie, falls gewünscht */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px; /* oder eine andere Größe, die zu Ihrem Design passt */
+    margin-right: 10px;
+}
+
+.company-name {
+    color: #016FD0; /* Blaue Schriftfarbe */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Restliche Styles für Ihren Header */
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+}
+
+.login-button {
+    background-color: #016FD0; /* Blauer Hintergrund */
+    color: #FFFFFF; /* Weiße Schrift */
+    border: none;
+    border-radius: 7px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Guardian', sans-serif; /* Guardian Schriftart */
+}
+
+.help-button {
+    background-color: transparent; /* Transparenter Hintergrund */
+    color: #016FD0;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em; /* Größeres Icon */
+    position: relative;
+    font-family: 'Guardian', sans-serif; /* Guardian Schriftart */
+}
+
+.help-button .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.help-button:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.fa {
+    margin-right: 5px; /* Abstand zwischen Icon und Text */
+}
+
+button:hover {
+    opacity: 0.8; /* Effekt beim Überfahren mit der Maus */
+}
+
+.btn_btn-delete {
+    background-color: #FF4136; /* Rote Farbe */
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Guardian', sans-serif; /* Guardian Schriftart */
+    /* Weitere Stile nach Bedarf */
+}
+
+.btn_btn-delete:hover {
+    background-color: #E82C0C; /* Dunklere Rottönung für Hover-Effekt */
+}
+
+.btn_btn-primary {
+    background-color: #016FD0; 
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Guardian', sans-serif; /* Guardian Schriftart */
+
+}
+
+.btn_btn-primary:hover {
+    background-color: #0158A7; /* Dunklere Blautönung für Hover-Effekt */
+}
+
+.btn_btn-primary {
+    background-color: #016FD0; 
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Guardian', sans-serif; /* Guardian Schriftart */
+
+}
+
+.btn_btn-load{
+    background-color: #4fbe8f; 
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Guardian', sans-serif; /* Guardian Schriftart */
+}
+
+.btn_btn-load:hover {
+    background-color: #3d8e6f; 
+}

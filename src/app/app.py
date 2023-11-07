@@ -4,7 +4,7 @@ import numpy as np
 
 app = Flask(__name__)
 model = xgb.XGBClassifier()
-model.load_model('models/best_xgboost_model.json')  # Laden des Modells
+model.load_model('models/best_model.json')  # Laden des Modells
 
 @app.route('/')
 def home():
@@ -24,4 +24,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=8000)
