@@ -170,57 +170,106 @@ button:hover {
     opacity: 0.8; /* Effekt beim Überfahren mit der Maus */
 }
 
-.btn_btn-delete {
-    background-color: #FF4136; /* Rote Farbe */
-    color: white;
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Zentriert die Buttons auf der jeweiligen Seite */
+    align-items: center; /* Vertikales Zentrieren der Buttons */
+    padding: 10px 0; /* Etwas Polsterung oben und unten für den Container */
+}
+.button-container .btn {
+    padding: 10px 20px; /* Polsterung für die Buttons */
+    margin-right: 10px; /* Abstand zwischen den Buttons */
+    border-radius: 7px; /* Abgerundete Ecken */
+    color: white; /* Weiße Schrift */
+    cursor: pointer; /* Mauszeiger als Klickzeiger */
     border: none;
-    border-radius: 7px;
-    padding: 10px 20px;
-    cursor: pointer;
     font-family: 'Guardian', sans-serif; /* Guardian Schriftart */
-    /* Weitere Stile nach Bedarf */
+    transition: background-color 0.3s; /* Sanfter Übergang für den Hintergrund */
 }
 
-.btn_btn-delete:hover {
+
+.button-container .btn-delete {
+    margin-left: auto; /* Schiebt den Button nach rechts */
+    background-color: #FF4136; /* Rote Farbe für den Löschen-Button */
+}
+
+.button-container .btn:hover {
+    opacity: 0.8;
+}
+
+
+.button-container .btn-delete:hover {
     background-color: #E82C0C; /* Dunklere Rottönung für Hover-Effekt */
 }
 
-.btn_btn-primary {
+.button-container .btn-primary {
     background-color: #016FD0; 
-    color: white;
-    border: none;
-    border-radius: 7px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-family: 'Guardian', sans-serif; /* Guardian Schriftart */
-
 }
 
-.btn_btn-primary:hover {
+.button-container .btn-primary:hover {
     background-color: #0158A7; /* Dunklere Blautönung für Hover-Effekt */
 }
 
-.btn_btn-primary {
+.button-container .btn-load{
     background-color: #016FD0; 
-    color: white;
-    border: none;
-    border-radius: 7px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-family: 'Guardian', sans-serif; /* Guardian Schriftart */
-
 }
 
-.btn_btn-load{
-    background-color: #4fbe8f; 
-    color: white;
-    border: none;
-    border-radius: 7px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-family: 'Guardian', sans-serif; /* Guardian Schriftart */
+.button-container .btn-load:hover {
+    background-color: #0158A7; 
 }
 
-.btn_btn-load:hover {
-    background-color: #3d8e6f; 
+.input-method label {
+    margin-right: 10px;
 }
+
+.input-method
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+/* Style the buttons inside the tab */
+.tab button {
+background-color: inherit;
+float: left;
+border: none;
+outline: none;
+cursor: pointer;
+padding: 14px 16px;
+transition: 0.3s;
+font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+display: none;
+padding: 6px 12px;
+border: 1px solid #ccc;
+border-top: none;
+}
+
+.file-upload-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.file-upload-container button {
+    margin: 10px;
+}
+  
