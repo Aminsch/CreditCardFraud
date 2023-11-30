@@ -27,14 +27,23 @@
             </button>
         </div>
     </div>
-    <div class="input-method">
-        <input type="radio" id="jsonInputMethod" name="inputMethod" value="json" checked>
-        <label for="jsonInputMethod">JSON</label>
-        <input type="radio" id="csvInputMethod" name="inputMethod" value="csv">
-        <label for="csvInputMethod">CSV</label>
-        <input type="radio" id="manualInputMethod" name="inputMethod" value="manual">
-        <label for="manualInputMethod">Manueller Input</label>
+    <div class="Input-method">
+        <div class="input-method-option">
+            <input type="radio" id="jsonInputMethod" name="inputMethod" value="json">
+            <span>JSON</span>
+        </div>
+        
+        <div class="input-method-option">
+            <input type="radio" id="csvInputMethod" name="inputMethod" value="csv">
+            <span>CSV</span>
+        </div>
+    
+        <div class="input-method-option">
+            <input type="radio" id="manualInputMethod" name="inputMethod" value="manual" checked>
+            <span>Manueller Input</span>
+        </div>
     </div>
+    
     <div class="container mt-5">
         <h2>Kreditkarteninformations Formular</h2>
         <p class="description">Bitte geben Sie die Kreditkarteninformationen ein, um eine Betrugsvorhersage zu erhalten. <br>

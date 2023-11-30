@@ -8,7 +8,7 @@ $(document).ready(function() {
         } else if (method === 'manual') {
             $('#manualInputFields, #predictButton').show(); // Zeige manuelle Eingabefelder und Vorhersage-Button
             $('.tab, .tabcontent').hide();
-            $('#jsonSubmitButton, #clearButton').show();
+            $('#jsonSubmitButton, #clearButton').hide();
         }
     }
 
@@ -17,8 +17,9 @@ $(document).ready(function() {
         toggleInputMethod($(this).val());
     });
 
-    // Initial die Sichtbarkeit basierend auf der ausgewählten Methode setzen
-    toggleInputMethod($('input[name="inputMethod"]:checked').val());
+    // Setze "Manueller Input" als Standardmethode beim Laden der Seite
+    $('#manualInputMethod').prop('checked', true);
+    toggleInputMethod('manual');
 
     // Funktion zur Ausführung der Betrugsvorhersage
     function makePrediction(dataObject) {

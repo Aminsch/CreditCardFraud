@@ -218,14 +218,54 @@ button:hover {
     background-color: #0158A7; 
 }
 
-.input-method label {
-    margin-right: 10px;
+/* Style the input-method container */
+.input-method {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensure the container itself is centered */
+    gap: 10px;
 }
 
-.input-method
-input[type="radio"] {
-    margin-right: 5px;
+.input-method-option {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    gap: 5px;
+    justify-content: center; /* Center the flex items horizontally */
 }
+
+.input-method-option span {
+    background-color: #f2f2f2;
+    color: white; /* Change text color to white */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    width: auto; /* Adjust width to content */
+    max-width: 150px; /* Set a max-width if necessary */
+}
+
+.input-method-option #jsonInputMethod + span {
+    background-color: #4FBE8F;
+    border-color: #4FBE8F;
+}
+
+.input-method-option #csvInputMethod + span {
+    background-color: #4F68BE;
+    border-color: #4F68BE;
+}
+
+.input-method-option #manualInputMethod + span {
+    background-color: #BE6F4F;
+    border-color: #BE6F4F;
+}
+
+/* Darker color when checked */
+.input-method-option input[type="radio"]:checked + span {
+    filter: brightness(85%);
+}
+
+
+
 
 /* Style the tab */
 .tab {
