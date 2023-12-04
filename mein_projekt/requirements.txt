@@ -1,9 +1,11 @@
+jupyter-book
+matplotlib
+numpy
 pip
 
 pandas
 numpy
 
-matplotlib
 seaborn
 
 kaggle
@@ -13,3 +15,5 @@ scikit-learn
 
 flask
 ipython
+
+docutils

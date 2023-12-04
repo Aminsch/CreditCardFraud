@@ -4,7 +4,7 @@ import numpy as np
 
 app = Flask(__name__)
 model = xgb.XGBClassifier()
-model.load_model('models/best_model.json')  # Laden des Modells
+model.load_model('mein_projekt/models/best_model.json')  # Laden des Modells
 
 @app.route('/')
 def home():
