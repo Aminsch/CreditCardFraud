@@ -65,7 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'creditcard_fraud';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+    <link rel="next" title="High-Level-Architektur der Applikation" href="high_level_arch.html" />
+    <link rel="prev" title="Machine Learning in der Anwendung Projekt “Credit Card Fraud”" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,13 +158,14 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to your Jupyter Book
+                    Machine Learning in der Anwendung Projekt “Credit Card Fraud”
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Machine Learning in der Anwendung Software Projekt</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="high_level_arch.html">High-Level-Architektur der Applikation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cite.html">Literaturverzeichnis</a></li>
 </ul>
 
     </div>
@@ -218,7 +220,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/Aminsch/CreditCardFraud" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -235,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcreditcard_fraud.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Aminsch/CreditCardFraud/issues/new?title=Issue%20on%20page%20%2Fcreditcard_fraud.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -359,7 +361,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Machine Learning in der Anwendung Software Projekt</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#einleitung-zum-business-case">1. Einleitung zum Business Case</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis">Data Analysis</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufschlusslung-der-gridsearch">Aufschlüsslung der Gridsearch:</a></li>
@@ -379,22 +380,17 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f1-score-0-8695652173913043">F1 Score: 0.8695652173913043</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#versuch-recall-zuverbessern-durch-early-stopping-und-custom-recall">Versuch Recall zuverbessern durch early stopping und custom recall</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eregvebnisse-mit-early-stopping-50-und-lossfunction-mit-5-facher-gewichtung">Eregvebnisse mit early stopping = 50 und Lossfunction mit 5 Facher Gewichtung</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#accuracy-0-9996488887328394">Accuracy: 0.9996488887328394</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#recall-0-826530612244898">Recall: 0.826530612244898</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#precision-0-9642857142857143">Precision: 0.9642857142857143</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f1-score-0-8901098901098901">F1 Score: 0.8901098901098901</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#versuch-recall-zuverbessern-durch-early-stopping-und-custom-recall">Versuch Recall zuverbessern durch early stopping und custom recall</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eregvebnisse-mit-early-stopping-50-und-lossfunction-mit-5-facher-gewichtung">Eregvebnisse mit early stopping = 50 und Lossfunction mit 5 Facher Gewichtung</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accuracy-0-9996488887328394">Accuracy: 0.9996488887328394</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recall-0-826530612244898">Recall: 0.826530612244898</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#precision-0-9642857142857143">Precision: 0.9642857142857143</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f1-score-0-8901098901098901">F1 Score: 0.8901098901098901</a></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -409,7 +405,8 @@ document.write(`
 <h1>Machine Learning in der Anwendung Software Projekt<a class="headerlink" href="#machine-learning-in-der-anwendung-software-projekt" title="Permalink to this heading">#</a></h1>
 <section id="einleitung-zum-business-case">
 <h2>1. Einleitung zum Business Case<a class="headerlink" href="#einleitung-zum-business-case" title="Permalink to this heading">#</a></h2>
-<p>Pro Jahr kommt es im Euro Raum zu einem Schaden von 1,8 Milliarden Euro durch Kreditkartenbetrug. [&#64;ECB2023] Um diesen Schaden zu minimieren, werden in diesem Projekt verschiedene Machine Learning Algorithmen auf einen Datensatz angewendet, um Kreditkartenbetrug zu erkennen.</p>
+<p>Pro Jahr kommt es im Euro Raum zu einem Schaden von 1,8 Milliarden Euro durch Kreditkartenbetrug (vgl. <span id="id1">[<a class="reference internal" href="cite.html#id2" title="European Central Bank. Card fraud in europe declines significantly. May 2023. URL: https://www.ecb.europa.eu/press/pr/date/2023/html/ecb.pr230526~f09bc3c664.en.html.">European Central Bank, 2023</a>]</span>). <br>
+Durch dieses Problem ist das Kreditkartenunternehmen American Express angewiesen, solche Fälle zuerkennen. Die Gesamtmenge an Transaktionen überschreitet, jedoch die Möglichkeit jede  Zahlungen einzelnen unter die Lupe zunehmen. <br>Bei dieser Problemstellung soll eine Website helfen in dem ein Machine Learning Modell Muster erkennt und so mögliche betrügerische Transaktionen erkennen kann.<br> Hierbei soll ein Mitarbeiter in der ersten Ausbaustufe verschiedene Merkmale angeben können und dann eine Aussage darüber erhalten, ob eine Transaktion möglicherweise betrügerische Handlungenen enthält</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Installieren der benötigten Pakete und Bibliotheken</span>
@@ -472,64 +469,139 @@ document.write(`
   0%|                                               | 0.00/66.0M [00:00&lt;?, ?B/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▌                                     | 1.00M/66.0M [00:00&lt;00:37, 1.83MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▌                                     | 1.00M/66.0M [00:00&lt;00:57, 1.18MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  5%|█▋                                    | 3.00M/66.0M [00:00&lt;00:12, 5.14MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|█▏                                    | 2.00M/66.0M [00:01&lt;00:38, 1.73MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  9%|███▍                                  | 6.00M/66.0M [00:00&lt;00:06, 10.3MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  5%|█▋                                    | 3.00M/66.0M [00:01&lt;00:27, 2.41MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 15%|█████▊                                | 10.0M/66.0M [00:00&lt;00:03, 16.9MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  6%|██▎                                   | 4.00M/66.0M [00:01&lt;00:23, 2.79MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 21%|████████                              | 14.0M/66.0M [00:01&lt;00:02, 22.5MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  9%|███▍                                  | 6.00M/66.0M [00:01&lt;00:13, 4.82MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 27%|██████████▎                           | 18.0M/66.0M [00:01&lt;00:01, 25.4MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 12%|████▌                                 | 8.00M/66.0M [00:02&lt;00:08, 6.75MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 32%|████████████                          | 21.0M/66.0M [00:01&lt;00:01, 26.8MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 15%|█████▊                                | 10.0M/66.0M [00:02&lt;00:07, 7.40MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 36%|█████████████▊                        | 24.0M/66.0M [00:01&lt;00:01, 25.8MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 18%|██████▉                               | 12.0M/66.0M [00:02&lt;00:06, 8.33MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 42%|████████████████▏                     | 28.0M/66.0M [00:01&lt;00:01, 28.2MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 20%|███████▍                              | 13.0M/66.0M [00:02&lt;00:06, 8.50MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 47%|█████████████████▊                    | 31.0M/66.0M [00:01&lt;00:01, 28.1MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 21%|████████                              | 14.0M/66.0M [00:02&lt;00:07, 7.76MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 52%|███████████████████▌                  | 34.0M/66.0M [00:01&lt;00:01, 27.2MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 23%|████████▋                             | 15.0M/66.0M [00:02&lt;00:06, 7.64MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 56%|█████████████████████▎                | 37.0M/66.0M [00:01&lt;00:01, 28.2MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 24%|█████████▏                            | 16.0M/66.0M [00:03&lt;00:07, 6.80MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 61%|███████████████████████               | 40.0M/66.0M [00:01&lt;00:00, 29.0MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 26%|█████████▊                            | 17.0M/66.0M [00:03&lt;00:08, 5.98MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 67%|█████████████████████████▎            | 44.0M/66.0M [00:02&lt;00:00, 31.8MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 27%|██████████▎                           | 18.0M/66.0M [00:03&lt;00:08, 6.25MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 73%|███████████████████████████▋          | 48.0M/66.0M [00:02&lt;00:00, 32.4MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 29%|██████████▉                           | 19.0M/66.0M [00:03&lt;00:07, 6.90MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 79%|█████████████████████████████▉        | 52.0M/66.0M [00:02&lt;00:00, 28.1MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 30%|███████████▌                          | 20.0M/66.0M [00:03&lt;00:07, 6.46MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 85%|████████████████████████████████▎     | 56.0M/66.0M [00:02&lt;00:00, 29.9MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 33%|████████████▋                         | 22.0M/66.0M [00:04&lt;00:05, 8.04MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 91%|██████████████████████████████████▌   | 60.0M/66.0M [00:02&lt;00:00, 30.8MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 35%|█████████████▎                        | 23.0M/66.0M [00:04&lt;00:05, 8.24MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 97%|████████████████████████████████████▉ | 64.0M/66.0M [00:02&lt;00:00, 32.3MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 36%|█████████████▊                        | 24.0M/66.0M [00:04&lt;00:06, 6.97MB/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████████████████████████████████| 66.0M/66.0M [00:02&lt;00:00, 24.4MB/s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 38%|██████████████▍                       | 25.0M/66.0M [00:04&lt;00:05, 7.63MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 41%|███████████████▌                      | 27.0M/66.0M [00:04&lt;00:04, 9.10MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 44%|████████████████▋                     | 29.0M/66.0M [00:04&lt;00:04, 8.84MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 47%|█████████████████▊                    | 31.0M/66.0M [00:05&lt;00:03, 10.1MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 50%|███████████████████                   | 33.0M/66.0M [00:05&lt;00:03, 10.6MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 53%|████████████████████▏                 | 35.0M/66.0M [00:05&lt;00:03, 9.63MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 56%|█████████████████████▎                | 37.0M/66.0M [00:05&lt;00:03, 9.92MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 58%|█████████████████████▉                | 38.0M/66.0M [00:05&lt;00:02, 9.89MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 59%|██████████████████████▍               | 39.0M/66.0M [00:05&lt;00:03, 8.56MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 62%|███████████████████████▌              | 41.0M/66.0M [00:06&lt;00:02, 9.54MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 65%|████████████████████████▊             | 43.0M/66.0M [00:06&lt;00:02, 10.6MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 68%|█████████████████████████▉            | 45.0M/66.0M [00:06&lt;00:02, 9.43MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 70%|██████████████████████████▌           | 46.0M/66.0M [00:06&lt;00:02, 7.72MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 71%|███████████████████████████           | 47.0M/66.0M [00:07&lt;00:02, 7.35MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 74%|████████████████████████████▏         | 49.0M/66.0M [00:07&lt;00:02, 8.75MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 77%|█████████████████████████████▍        | 51.0M/66.0M [00:07&lt;00:01, 9.51MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 80%|██████████████████████████████▌       | 53.0M/66.0M [00:07&lt;00:01, 9.15MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 83%|███████████████████████████████▋      | 55.0M/66.0M [00:07&lt;00:01, 10.1MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 86%|████████████████████████████████▊     | 57.0M/66.0M [00:07&lt;00:00, 10.7MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 89%|█████████████████████████████████▉    | 59.0M/66.0M [00:08&lt;00:00, 9.03MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 92%|███████████████████████████████████▏  | 61.0M/66.0M [00:08&lt;00:00, 9.61MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 94%|███████████████████████████████████▋  | 62.0M/66.0M [00:08&lt;00:00, 9.01MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 96%|████████████████████████████████████▎ | 63.0M/66.0M [00:08&lt;00:00, 9.20MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 97%|████████████████████████████████████▉ | 64.0M/66.0M [00:08&lt;00:00, 9.42MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 99%|█████████████████████████████████████▍| 65.0M/66.0M [00:08&lt;00:00, 9.43MB/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████████████████████████████████| 66.0M/66.0M [00:08&lt;00:00, 7.69MB/s]
 </pre></div>
 </div>
 </div>
@@ -1271,6 +1343,20 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fitting 3 folds for each of 729 candidates, totalling 2187 fits
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exception ignored on calling ctypes callback function: &lt;bound method DataIter._next_wrapper of &lt;xgboost.data.SingleBatchInternalIter object at 0x16957bfd0&gt;&gt;
+Traceback (most recent call last):
+  File &quot;/Users/amin/anaconda3/lib/python3.11/site-packages/xgboost/core.py&quot;, line 588, in _next_wrapper
+    def _next_wrapper(self, this: None) -&gt; int:  # pylint: disable=unused-argument
+
+KeyboardInterrupt: 
+Exception ignored on calling ctypes callback function: &lt;bound method DataIter._next_wrapper of &lt;xgboost.data.SingleBatchInternalIter object at 0x12a4d2c10&gt;&gt;
+Traceback (most recent call last):
+  File &quot;/Users/amin/anaconda3/lib/python3.11/site-packages/xgboost/core.py&quot;, line 588, in _next_wrapper
+    def _next_wrapper(self, this: None) -&gt; int:  # pylint: disable=unused-argument
+
+KeyboardInterrupt: 
+</pre></div>
+</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
@@ -1537,10 +1623,8 @@ weighted avg       1.00      1.00      1.00     56962
 </div>
 </section>
 </section>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="versuch-recall-zuverbessern-durch-early-stopping-und-custom-recall">
-<h1>Versuch Recall zuverbessern durch early stopping und custom recall<a class="headerlink" href="#versuch-recall-zuverbessern-durch-early-stopping-und-custom-recall" title="Permalink to this heading">#</a></h1>
+<section id="versuch-recall-zuverbessern-durch-early-stopping-und-custom-recall">
+<h3>Versuch Recall zuverbessern durch early stopping und custom recall<a class="headerlink" href="#versuch-recall-zuverbessern-durch-early-stopping-und-custom-recall" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">custom_asymmetric_loss</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">dtrain</span><span class="p">):</span>
@@ -1714,19 +1798,20 @@ F1 Score: 0.8901098901098902
 </div>
 </div>
 </div>
+</section>
 <section id="eregvebnisse-mit-early-stopping-50-und-lossfunction-mit-5-facher-gewichtung">
-<h2>Eregvebnisse mit early stopping = 50 und Lossfunction mit 5 Facher Gewichtung<a class="headerlink" href="#eregvebnisse-mit-early-stopping-50-und-lossfunction-mit-5-facher-gewichtung" title="Permalink to this heading">#</a></h2>
+<h3>Eregvebnisse mit early stopping = 50 und Lossfunction mit 5 Facher Gewichtung<a class="headerlink" href="#eregvebnisse-mit-early-stopping-50-und-lossfunction-mit-5-facher-gewichtung" title="Permalink to this heading">#</a></h3>
 <section id="accuracy-0-9996488887328394">
-<h3>Accuracy: 0.9996488887328394<a class="headerlink" href="#accuracy-0-9996488887328394" title="Permalink to this heading">#</a></h3>
+<h4>Accuracy: 0.9996488887328394<a class="headerlink" href="#accuracy-0-9996488887328394" title="Permalink to this heading">#</a></h4>
 </section>
 <section id="recall-0-826530612244898">
-<h3>Recall: 0.826530612244898<a class="headerlink" href="#recall-0-826530612244898" title="Permalink to this heading">#</a></h3>
+<h4>Recall: 0.826530612244898<a class="headerlink" href="#recall-0-826530612244898" title="Permalink to this heading">#</a></h4>
 </section>
 <section id="precision-0-9642857142857143">
-<h3>Precision: 0.9642857142857143<a class="headerlink" href="#precision-0-9642857142857143" title="Permalink to this heading">#</a></h3>
+<h4>Precision: 0.9642857142857143<a class="headerlink" href="#precision-0-9642857142857143" title="Permalink to this heading">#</a></h4>
 </section>
 <section id="f1-score-0-8901098901098901">
-<h3>F1 Score: 0.8901098901098901<a class="headerlink" href="#f1-score-0-8901098901098901" title="Permalink to this heading">#</a></h3>
+<h4>F1 Score: 0.8901098901098901<a class="headerlink" href="#f1-score-0-8901098901098901" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">preds</span>
@@ -1790,6 +1875,7 @@ weighted avg       1.00      1.00      1.00     56962
 </section>
 </section>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1827,8 +1913,17 @@ weighted avg       1.00      1.00      1.00     56962
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        <p class="prev-next-title">Machine Learning in der Anwendung Projekt “Credit Card Fraud”</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="high_level_arch.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">High-Level-Architektur der Applikation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -1845,7 +1940,6 @@ weighted avg       1.00      1.00      1.00     56962
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Machine Learning in der Anwendung Software Projekt</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#einleitung-zum-business-case">1. Einleitung zum Business Case</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis">Data Analysis</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufschlusslung-der-gridsearch">Aufschlüsslung der Gridsearch:</a></li>
@@ -1865,22 +1959,17 @@ weighted avg       1.00      1.00      1.00     56962
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f1-score-0-8695652173913043">F1 Score: 0.8695652173913043</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#versuch-recall-zuverbessern-durch-early-stopping-und-custom-recall">Versuch Recall zuverbessern durch early stopping und custom recall</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eregvebnisse-mit-early-stopping-50-und-lossfunction-mit-5-facher-gewichtung">Eregvebnisse mit early stopping = 50 und Lossfunction mit 5 Facher Gewichtung</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#accuracy-0-9996488887328394">Accuracy: 0.9996488887328394</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#recall-0-826530612244898">Recall: 0.826530612244898</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#precision-0-9642857142857143">Precision: 0.9642857142857143</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f1-score-0-8901098901098901">F1 Score: 0.8901098901098901</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#versuch-recall-zuverbessern-durch-early-stopping-und-custom-recall">Versuch Recall zuverbessern durch early stopping und custom recall</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eregvebnisse-mit-early-stopping-50-und-lossfunction-mit-5-facher-gewichtung">Eregvebnisse mit early stopping = 50 und Lossfunction mit 5 Facher Gewichtung</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accuracy-0-9996488887328394">Accuracy: 0.9996488887328394</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recall-0-826530612244898">Recall: 0.826530612244898</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#precision-0-9642857142857143">Precision: 0.9642857142857143</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f1-score-0-8901098901098901">F1 Score: 0.8901098901098901</a></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
@@ -1894,20 +1983,13 @@ weighted avg       1.00      1.00      1.00     56962
   <div class="footer-item">
     
 <p class="component-author">
-By Amin Schleiter
+By Amin Schleiter 679762
 </p>
 
   </div>
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2022.
-      <br/>
-    
-  </p>
 
   </div>
   

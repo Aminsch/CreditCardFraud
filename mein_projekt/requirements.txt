@@ -17,3 +17,4 @@ flask
 ipython
 
 docutils
+myst-parser

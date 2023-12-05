@@ -5,4 +5,6 @@ format: jb-book
 root: intro
 chapters:
 - file: creditcard_fraud
+- file: high_level_arch
+- file: cite
 
