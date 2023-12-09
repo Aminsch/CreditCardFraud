@@ -1,7 +1,7 @@
-gunicorn==20.0.4
-numpy==1.26.2
-pybind11 @ file:///private/tmp/pybind11-20231006-5480-1dj4kz4/pybind11-2.11.1
-SciPy @ file:///private/tmp/scipy-20231124-6517-1sz4zn/scipy-1.11.4
+gunicorn
+numpy
+pybind11
+SciPy
 jupyter-book
 matplotlib
 pip
